@@ -31,7 +31,7 @@
     </h2>
 
     <!-- Menu Section -->
-    <div>
+    <div id="menu">
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
             <div class="flex gap-2">
                 <img src="./assets/hamb-1.png" alt="Hamburguer Smash Simples"
@@ -121,7 +121,8 @@
         <div class="max-auto max-w-7xl px-2 my-2 mb-5">
             <h2 class="font-bold text-3xl"> Bebidas</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
             <div class="flex gap-2 w-full">
                 <img src="./assets/refri-1.png" alt="Coca-Cola Lata"
                     class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
@@ -166,7 +167,8 @@
         </div>
 
         <!-- Modal -->
-        <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] justify-center items-center hidden">
+        <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] justify-center items-center hidden" 
+        id="cart-modal">
 
             <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
                 <h2 class="font-bold text-center text-2xl mb-2"> Meu Carrinho </h2>
@@ -193,9 +195,9 @@
 
         <!-- Footer -->
         <footer
-            class=" w-full bg-red-500 text-white text-center py-4 fixed bottom-0 z-40 flex items-center justify-center">
-            <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
-                (<span id="cart-count">2</span>)
+            class=" w-full bg-red-500 text-white text-center py-4 fixed bottom-0 z-40 flex items-center justify-center cursor-pointer">
+            <button class="flex items-center gap-2 text-white font-bold cursor-pointer" id="cart-btn">
+                (<span id="cart-count">0</span>)
                 Veja meu carrinho
                 <i class="fa fa-cart-plus text-lg text-white"></i>
 
@@ -204,6 +206,8 @@
         </footer>
         <!-- Fim Footer -->
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 
