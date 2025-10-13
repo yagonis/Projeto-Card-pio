@@ -10,7 +10,10 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
+<<<<<<< HEAD
     --color-gray-400: oklch(70.7% 0.022 261.325);
+=======
+>>>>>>> c951852 (Segunda parte JS)
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-black: #000;
@@ -217,6 +220,12 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+<<<<<<< HEAD
+=======
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+>>>>>>> c951852 (Segunda parte JS)
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
@@ -232,6 +241,12 @@
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
+<<<<<<< HEAD
+=======
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+>>>>>>> c951852 (Segunda parte JS)
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
@@ -488,6 +503,12 @@ body {
 :root {
   --background-image-hero: url('../assets/bg.png');
 }
+<<<<<<< HEAD
+=======
+button {
+  cursor: pointer;
+}
+>>>>>>> c951852 (Segunda parte JS)
 @property --tw-border-style {
   syntax: "*";
   inherits: false;

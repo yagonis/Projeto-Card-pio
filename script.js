@@ -5,13 +5,21 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 const checkOutBtn = document.getElementById('checkout-btn');
 const closeModalBtn = document.getElementById('close-modal-btn');
+<<<<<<< HEAD
 const cartCounter = document.getElementById('cart-counter');
+=======
+const cartCounter = document.getElementById('cart-count');
+>>>>>>> c951852 (Segunda parte JS)
 const addressInput = document.getElementById('address');
 const addressWarning = document.getElementById('address-warn');
 
 let cart = [];
 
 cartBtn.addEventListener('click', function(){
+<<<<<<< HEAD
+=======
+    updateModal();
+>>>>>>> c951852 (Segunda parte JS)
     cartModal.style.display = 'flex';
 })
 
@@ -37,6 +45,66 @@ menu.addEventListener('click', function(event){
 })
 
 function addToCart(name, price){
+<<<<<<< HEAD
     
     cart.push({name, price, quantity : 1})
 }
+=======
+    const existingItem = cart.find(item => item.name === name)    
+
+    if(existingItem){
+        existingItem.quantity += 1;
+        return;
+    }
+
+    cart.push({name, price, quantity : 1})
+
+    updateModal()
+}
+
+function updateModal(){
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+    const cartItemElement = document.createElement("div");
+    cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+
+   cartItemElement.innerHTML = `
+   <div class = "flex items-center justify-between">
+
+        <div>
+            <p class = "font-bold"> ${item.name} </p>
+            <p> Qtd: ${item.quantity} </p>
+            <p class ="font-medium mt-2"> ${item.price.toFixed(2)} </p>
+        </div>
+
+        <div>
+            <button class = "remove-item" data-name = "${item.name}"> 
+                remover 
+            </button>
+        </div>
+   </div>
+    `
+    total += item.price * item.quantity;
+
+    cartItemsContainer.appendChild(cartItemElement);
+})
+
+cartTotal.textContent = total.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+});
+
+cartCounter.innerHTML = cart.length;
+
+}
+
+cartItemsContainer.addEventListener('click', function(event){
+    if(event.target.classList.contains('remove-item')){
+        const name = event.target.getAttribute('data-name')
+    }
+
+    console.log(name);
+})
+>>>>>>> c951852 (Segunda parte JS)
