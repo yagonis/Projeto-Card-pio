@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./styles/output.css">
+    <title>DevBurguerGonis - Yagonis in the kitchen</title>
+</head>
+
+<body>
+    <header
+        class="w-full h-[420px] bg-zinc-900 bg-[image:var(--background-image-hero)] bg-cover bg-center flex justify-center items-center">
+        <div class=" w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/hamb-1.png" alt="Logo DevBurguerGonis"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white "> DevBurguerGonis </h1>
+            <p></p>
+            <span class="text-white font-medium"> Rua Paulino Guimarães Junio, 256A - Diamantina MG</span>
+            <div class="flex">
+                <span class="text-white font-medium bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                    Seg a Dom: 18:00 - 23:00
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nosso menu
+    </h2>
+
+    <!-- Menu Section -->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2">
+                <img src="./assets/hamb-1.png" alt="Hamburguer Smash Simples"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hamburguer Smash Simples</p>
+                    <p class="text-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum distinctio
+                        praesentium mollitia
+                        magnam dolores nostrum tempora cumque? </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold"> R$ 18.99 </p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash Simples"
+                            data-price="18.99">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/hamb-2.png" alt="Hamburguer Smash Duplo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300 mx-1.5">
+
+                <div>
+                    <p class="font-bold">Hamburguer Smash Duplo</p>
+                    <p class="text-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum distinctio
+                        praesentium mollitia
+                        magnam dolores nostrum tempora cumque? </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold"> R$ 26.99 </p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash Duplo"
+                            data-price="26.99">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/hamb-3.png" alt="Hamburguer Cheddar Bacon"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300 mx-1.5">
+
+                <div>
+                    <p class="font-bold">Hamburguer Cheddar Bacon</p>
+                    <p class="text-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum distinctio
+                        praesentium mollitia
+                        magnam dolores nostrum tempora cumque? </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold"> R$ 23.99 </p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Cheddar Bacon"
+                            data-price="23.99">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/hamb-4.png" alt="Hamburguer Chicken Salad"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300 mx-1.5">
+
+                <div>
+                    <p class="font-bold">Hamburguer Chicken Salad</p>
+                    <p class="text-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum distinctio
+                        praesentium mollitia
+                        magnam dolores nostrum tempora cumque? </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold"> R$ 31.99 </p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Chicken Salad"
+                            data-price="31.99">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="max-auto max-w-7xl px-2 my-2 mb-5">
+            <h2 class="font-bold text-3xl"> Bebidas</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-1.png" alt="Coca-Cola Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Coca-Cola Lata</p>
+                    <p class="text-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum distinctio
+                        praesentium mollitia
+                        magnam dolores nostrum tempora cumque? </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold"> R$ 5.90 </p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca-Cola Lata"
+                            data-price="5.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-2.png" alt="Guaraná Lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Guaraná Lata</p>
+                    <p class="text-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum distinctio
+                        praesentium mollitia
+                        magnam dolores nostrum tempora cumque? </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold"> R$ 5.90 </p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Lata"
+                            data-price="5.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] justify-center items-center hidden" 
+        id="cart-modal">
+
+            <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+                <h2 class="font-bold text-center text-2xl mb-2"> Meu Carrinho </h2>
+
+                <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+                <p class="font-bold"> Total: <span id="cart-total"> 0.00</span></p>
+
+                <p class="font-bold mt-4"> Endereço de entrega: </p>
+
+                <input type="text" placeholder="Digite seu endereço completo..." id="address"
+                    class="w-full border-2 p-1 rounded my-1">
+
+                <p class="text-red-500 hidden" id="addres-warn">Digite o endereço de entrega correto!</p>
+
+                <div class="flex justify-between w-full mt-5">
+                    <button id="close-modal-btn">Fechar</button>
+                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- Fim Modal-->
+
+        <!-- Footer -->
+        <footer
+            class=" w-full bg-red-500 text-white text-center py-4 fixed bottom-0 z-40 flex items-center justify-center">
+            <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+                (<span id="cart-count">0</span>)
+                Veja meu carrinho
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+
+            </button>
+
+        </footer>
+        <!-- Fim Footer -->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
