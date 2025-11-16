@@ -5,21 +5,15 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 const checkOutBtn = document.getElementById('checkout-btn');
 const closeModalBtn = document.getElementById('close-modal-btn');
-<<<<<<< HEAD
-const cartCounter = document.getElementById('cart-counter');
-=======
 const cartCounter = document.getElementById('cart-count');
->>>>>>> c951852 (Segunda parte JS)
 const addressInput = document.getElementById('address');
 const addressWarning = document.getElementById('address-warn');
+const removeItemBtn = document.getElementById('remove-item');
 
 let cart = [];
 
 cartBtn.addEventListener('click', function(){
-<<<<<<< HEAD
-=======
     updateModal();
->>>>>>> c951852 (Segunda parte JS)
     cartModal.style.display = 'flex';
 })
 
@@ -45,11 +39,6 @@ menu.addEventListener('click', function(event){
 })
 
 function addToCart(name, price){
-<<<<<<< HEAD
-    
-    cart.push({name, price, quantity : 1})
-}
-=======
     const existingItem = cart.find(item => item.name === name)    
 
     if(existingItem){
@@ -103,8 +92,17 @@ cartCounter.innerHTML = cart.length;
 cartItemsContainer.addEventListener('click', function(event){
     if(event.target.classList.contains('remove-item')){
         const name = event.target.getAttribute('data-name')
+
+        removeItemCart(name);
     }
 
-    console.log(name);
-})
->>>>>>> c951852 (Segunda parte JS)
+});
+
+function removeItemCart(name){
+    const index = cart.findIndex(item => item.name === name);
+    
+    if(index !== -1){
+        const item = cart[index];
+        console.log(item); 
+    }
+}
