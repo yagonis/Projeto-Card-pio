@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Gera o cliente Prisma baseado nos seus modelos
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Seu cardápio (tipos de item)
+model Produto {
+  id          Int           @id @default(autoincrement())
+  nome        String        @unique // Importante para buscar o item pelo nome
+  preco       Decimal
+  categoria   String
+  itensPedido ItensPedido[] // Relação: Um produto pode estar em muitos itens de pedido
+}
+
+// O pedido do cliente (localização)
+model Pedido {
+  id              Int           @id @default(autoincrement())
+  enderecoCliente String
+  totalPedido     Decimal
+  dataHora        DateTime      @default(now())
+  itens           ItensPedido[] // Relação: Um pedido tem muitos itens
+}
+
+// A tabela que liga Produtos e Pedidos (itens)
+model ItensPedido {
+  id         Int      @id @default(autoincrement())
+  quantidade Int
+  
+  // Relação com Pedido
+  pedido    Pedido @relation(fields: [pedidoId], references: [id])
+  pedidoId  Int
+  
+  // Relação com Produto
+  produto   Produto @relation(fields: [produtoId], references: [id])
+  produtoId Int
+}
