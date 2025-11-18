@@ -316,6 +316,9 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-red-500 {
+    border-color: var(--color-red-500);
+  }
   .bg-black\/60 {
     background-color: color-mix(in srgb, #000 60%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
